@@ -1,20 +1,81 @@
-@media (min-width : 992px) {  <!-- desktop -->
-	div {
-		font-size: 100px;
-		color:blue;
+* {
+	box-sizing : border-box;
+}
+
+.page_header {
+	text-align : center;
+	font-family: sans-serif;
+	font-style: italic;
+}
+
+/*providing correct layout of text blocks*/
+.text_blocks {
+	display : flex;
+	flex-wrap: wrap;
+}
+
+.text {
+	display : inline-block;
+
+	margin : 10px 10px 10px 10px;
+	background-color : cyan;
+
+	border : 1px solid black;
+}
+
+.text_header {
+	display : table;
+	margin: 0px 0px 0px auto;
+	width: 250px;
+
+	font-family: sans-serif;
+	font-style: italic;
+
+	text-align : center;
+
+	border : 1px solid black;
+}
+
+#DC h1 {
+	background-color : red;
+}
+
+#NY h1 {
+	background-color : green;
+}
+
+#LA h1 {
+	background-color : blue;
+}
+
+.text p {
+
+	text-align : left;
+	/*margin between the paragraph text and the block border*/
+	margin : 5px;
+}
+
+/*desktop*/
+@media (min-width : 992px) {  
+	.text {
+		width : 31%;
 	}
 }
 
-@media (min-width : 768px) and (max-width : 991px) { <!-- tablet -->
-	div {
-		font-size: 100px;
-		color:red;
+/*tablet*/
+@media (min-width : 768px) and (max-width : 991px) { 
+	.text {
+		width : 47%;
+	}
+	/*third text block is on the second row and takes up the entire row */
+	.text:nth-child(3) {
+		width : 96%;
 	}
 }
 
-@media (max-width : 767px) { <!-- mobile -->
-	div {
-		font-size: 100px;
-		color:magenta;
+/*mobile*/
+@media (max-width : 767px) { 
+	.text {
+		width : 97%;
 	}
 }
